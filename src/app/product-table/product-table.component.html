@@ -1,0 +1,20 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<input placeholder="Search" type="text" #searchInput />
+<button (click)="onSearch(searchInput.value)">Search</button>
+<div>
+  <table class="w3-table w3-striped">
+    <tr>
+      <th><h4><b>Product</b></h4></th>
+      <th><h4><b>Price</b></h4></th>
+      <th><h4><b>Quantity</b></h4></th>
+    </tr>
+    <tr *ngFor="let product of ourProducts">
+      <th>{{product.name}}</th>
+      <th>{{product.price}}</th>
+      <th>{{product.quantity}}</th>
+    </tr>
+  </table>
+</div>
+<div class="w3-container w3-xlarge"> <p><button class="w3-button w3-circle w3-green" (click)="onHome()">Return Home Page</button></p></div>
